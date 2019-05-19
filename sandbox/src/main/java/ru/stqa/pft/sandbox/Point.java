@@ -1,16 +1,13 @@
 package ru.stqa.pft.sandbox;
 
 public class Point {
-    double x; // абсцисса точки
-    double y; // ордината точки
-    Point(double x, double y) {
+    public double x; // абсцисса точки
+    public double y; // ордината точки
+
+    public Point(double x, double y) {
         this.x = x;
         this.y = y;
     }
-    public double distance(Point p){
-
-        return Math.sqrt(Math.pow((this.x - this.x), 2) + Math.pow((this.y - this.y), 2));
-
-    }
+    public double distance(Point p1, Point p2) { return Math.sqrt(Math.pow((p1.x - p2.x), 2) + Math.pow((p1.y - p2.y), 2)); }
 
 }
