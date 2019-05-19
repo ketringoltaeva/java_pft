@@ -3,14 +3,14 @@ package ru.stqa.pft.sandbox;
 public class Point {
     double x; // абсцисса точки
     double y; // ордината точки
-    Point(double a, double b) {
-        x = a;
-        y = b;
+    Point(double x, double y) {
+        this.x = x;
+        this.y = y;
     }
-  //  попытка поработать с методом
-    //  public double distance () {
+    public double distance(Point p){
 
-      // double this.l = Math.sqrt( Math.pow((this.x - this.x),2) + Math.pow((this.y - this.y),2));
-        //return this.l;
-    //}
+        return Math.sqrt(Math.pow((this.x - this.x), 2) + Math.pow((this.y - this.y), 2));
+
+    }
+
 }
