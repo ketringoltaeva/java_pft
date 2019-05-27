@@ -39,8 +39,7 @@ public class ContactCreationTests {
     driver.findElement(By.name("lastname")).sendKeys("surname");
     driver.findElement(By.name("nickname")).clear();
     driver.findElement(By.name("nickname")).sendKeys("Ketrin");
-    
-    driver.findElement(By.name("photo")).sendKeys("C:\\fakepath\\12806181928468753.jpg");
+    // driver.findElement(By.name("photo")).sendKeys("C:\\fakepath\\12806181928468753.jpg");
     driver.findElement(By.name("title")).click();
     driver.findElement(By.name("title")).clear();
     driver.findElement(By.name("title")).sendKeys("tester");
