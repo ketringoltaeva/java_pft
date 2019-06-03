@@ -28,4 +28,24 @@ public class ContactHelper extends HelperBase {
         type(By.name("work"), contactData.getPhonework());
     }
 
+    public void selectContact() {
+        click(By.id("5"));
+    }
+
+    public void initContactModification() {
+        click(By.xpath("(//img[@alt='Edit'])[2]"));
+    }
+
+    public void submitContactModification() {
+        click(By.name("update"));
+    }
+
+    public void deleteSelectedContact() {
+        click(By.xpath("//input[@value='Delete']"));
+    }
+
+    public void deleteOkContact() {
+        wd.switchTo().alert().accept();
+
+    }
 }
