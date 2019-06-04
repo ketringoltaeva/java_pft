@@ -29,7 +29,7 @@ public class ContactHelper extends HelperBase {
     }
 
     public void selectContact() {
-        click(By.id("5"));
+        click(By.name("selected[]"));
     }
 
     public void initContactModification() {
