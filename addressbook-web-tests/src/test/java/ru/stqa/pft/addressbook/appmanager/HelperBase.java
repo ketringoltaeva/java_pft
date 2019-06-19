@@ -19,15 +19,10 @@ public class HelperBase {
 
     protected void type(By locator, String text) {
         click(locator);
-        if (text != null) {
-            String existingText = wd.findElement(locator).getAttribute("value");
-            if (! text.equals(existingText)) {
-                wd.findElement(locator).clear();
-                wd.findElement(locator).sendKeys(text);
+        wd.findElement(locator).clear();
+        wd.findElement(locator).sendKeys(text);
             }
 
-               }
-    }
     private boolean isAlertPresent() {
         try {
             wd.switchTo().alert();
@@ -36,11 +31,20 @@ public class HelperBase {
             return false;
         }
     }
-    private boolean isElementPresent(By by) {
+//    private boolean isElementPresent(By by) {
+  //      try {
+   //         wd.findElement(by);
+  //          return true;
+   //     } catch (NoSuchElementException e) {
+   //         return false;
+   //     }
+   // }
+
+    protected boolean isElementPresent(By locator) {
         try {
-            wd.findElement(by);
+            wd.findElement(locator);
             return true;
-        } catch (NoSuchElementException e) {
+        } catch (NoSuchElementException ex) {
             return false;
         }
     }
